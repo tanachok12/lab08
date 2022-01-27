@@ -9,10 +9,16 @@ jobs:
       - name: copy file to server
         uses: appleboy/scp-action@master
         with:
-          host: ${{secrets.HOST}}
-          username: ${{secrets.SSH_USER_NAME}}
-          port: ${{secrets.SSH_PORT}}
-          key: ${{secrets.SSH_KEY}}
-          source: "./html/*"
-          target: "/var/www/html"
-          strip_components: 1
+           username: ubuntu
+    source: ./html/*
+    target: /var/www/html
+    strip_components: 1
+    timeout: 30s
+    command_timeout: 10m
+    use_insecure_cipher: false
+    rm: false
+    debug: false
+    overwrite: false
+    proxy_port: 22
+    proxy_timeout: 30s
+    proxy_use_insecure_cipher: false
