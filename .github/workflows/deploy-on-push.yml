@@ -10,8 +10,8 @@ jobs:
         uses: appleboy/scp-action@master
         with:
            username: ubuntu
-    source: "./html/*"
-    target: "/var/www/html"
+    source : "./html/*"
+    target : "/var/www/html"
     strip_components: 1
     timeout: 30s
     command_timeout: 10m
@@ -19,6 +19,6 @@ jobs:
     rm: false
     debug: false
     overwrite: false
-    proxy_port: 22
+    proxy_port: 8080
     proxy_timeout: 30s
     proxy_use_insecure_cipher: false
