@@ -16,12 +16,4 @@ jobs:
           source: "./html/*"
           target: "/var/www/html"
           strip_components: 1
-          timeout: 30s
-    command_timeout: 10m
-    use_insecure_cipher: false
-    rm: false
-    debug: false
-    overwrite: false
-    proxy_port: 8080
-    proxy_timeout: 30s
-    proxy_use_insecure_cipher: false
+    
