@@ -15,5 +15,5 @@ jobs:
           port: ${{secrets.SSH_PORT}}
           key: ${{secrets.SSH_KEY}}
           source: "./html/*"
-          target: "/var/www/html"
+          target: "/var/www/html/html"
           strrip_components: 1
